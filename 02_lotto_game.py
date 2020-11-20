@@ -41,4 +41,16 @@ def get_player_numbers():
     return player_numbers
 
 
-get_player_numbers()
+def lotto_game():
+    print('   |  LOTTO GAME  |')
+    player_numbers=get_player_numbers()
+    lotto_numbers=generate_lotto_numbers()
+    win_result=0
+    for n in player_numbers:
+        if n in lotto_numbers:
+            win_result+=1
+
+    if win_result>=3:
+        print(f'Świetnie! Trafiłeś {win_result}')
+    else:
+        print(f'Miałeś pecha, to nic. Próbuj dalej!')
