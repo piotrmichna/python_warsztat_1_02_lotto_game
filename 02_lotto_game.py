@@ -20,8 +20,13 @@ def generate_lotto_numbers():
 def get_player_numbers():
     player_numbers = []
     while len(player_numbers) < 6:
+        if len(player_numbers):
+            print(f'Twoje liczby to: {player_numbers}')
+            input_str = "kolejną,"
+        else:
+            input_str = "liczbę"
         try:
-            number = int(input(f"Podaj liczbę {len(player_numbers) + 1}/6:"))
+            number = int(input(f"Podaj {input_str} {len(player_numbers) + 1} z 6:"))
         except ValueError:
             print('To nie jest liczba...')
             continue
@@ -32,5 +37,8 @@ def get_player_numbers():
             player_numbers.append(number)
         else:
             print("Tą liczbę już wybrałeś")
+
+    return player_numbers
+
 
 get_player_numbers()
