@@ -18,8 +18,11 @@ def generate_lotto_numbers():
 
 def get_player_numbers():
     player_numbers = []
-    while len(player_numbers)<6:
-        number=input(f"Podaj liczbę {len(player_numbers)+1}/6:")
+    while len(player_numbers) < 6:
+        number = int(input(f"Podaj liczbę {len(player_numbers) + 1}/6:"))
+        if number < 1 or number > 49:
+            print('Wybierz liczbę z zakresu 1...49')
+            continue
         if not (number in player_numbers):
             player_numbers.append(number)
         else:
