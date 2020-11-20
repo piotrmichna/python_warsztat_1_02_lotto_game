@@ -22,3 +22,7 @@ def get_player_numbers():
         number=input(f"Podaj liczbę {len(player_numbers)+1}/6:")
         if not (number in player_numbers):
             player_numbers.append(number)
+        else:
+            print("Tą liczbę już wybrałeś")
+
+get_player_numbers()
