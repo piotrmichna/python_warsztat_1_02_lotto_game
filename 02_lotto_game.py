@@ -2,6 +2,11 @@ from random import randint
 
 
 def generate_lotto_numbers():
+    """the function generates 6 random numbers
+    from range 1 to 49
+
+    :return: list of 6 integer number
+    """
     lotto_numbers = []
     while len(lotto_numbers) < 6:
         number = randint(1, 49)
@@ -18,6 +23,11 @@ def generate_lotto_numbers():
 
 
 def get_player_numbers():
+    """the function gets the player's 6 numbers from range 1 to 49
+    and checks for errors
+
+    :return: list of integer number
+    """
     player_numbers = []
     while len(player_numbers) < 6:
         if len(player_numbers):
@@ -42,6 +52,8 @@ def get_player_numbers():
 
 
 def lotto_game():
+    """Main function LOTTO GAME"""
+
     print('-------|  LOTTO GAME  |-------')
     player_numbers = get_player_numbers()
 
