@@ -14,4 +14,7 @@ def generate_lotto_numbers():
         if is_unique:
             lotto_numbers.append(number)
 
+    print(lotto_numbers)
+
+generate_lotto_numbers()
 
