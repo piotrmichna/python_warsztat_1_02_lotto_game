@@ -42,10 +42,13 @@ def get_player_numbers():
 
 
 def lotto_game():
-    print('   |  LOTTO GAME  |')
-    lotto_numbers = generate_lotto_numbers()
-    print(lotto_numbers)
+    print('-------|  LOTTO GAME  |-------')
     player_numbers = get_player_numbers()
+
+    print('_----------LOSOWANIE----------_')
+    lotto_numbers = generate_lotto_numbers()
+    print(f'LOTTO -{lotto_numbers}-')
+    print(f'GRACZ -{player_numbers}-')
 
     win_result = 0
     for n in player_numbers:
@@ -53,9 +56,10 @@ def lotto_game():
             win_result += 1
 
     if win_result >= 3:
-        print(f'Świetnie! Trafiłeś {win_result}')
+        print(f'\nŚwietnie! Trafiłeś {win_result}')
     else:
-        print(f'Miałeś pecha, to nic. Próbuj dalej!')
+        print('\nMiałeś pecha, to nic.\nPróbuj dalej!')
 
 
-lotto_game()
+if __name__ == '__main__':
+    lotto_game()
