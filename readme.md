@@ -1,3 +1,3 @@
 __Coderslab__
 
-_wartat 1 zadanie 2 gra Lotto_
+_warsztat 1, zadanie 2, gra Lotto_
